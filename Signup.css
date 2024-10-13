@@ -1,0 +1,84 @@
+.form_signup{
+    width: 420px;
+    background: #fff;
+    color: #000;
+    border: 2px solid rgba(0,0,0,.1);
+    border-radius: 12px;
+    padding: 30px 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+
+}
+
+.form_signup h1{
+    font-size: 36px;
+    text-align: center;
+}
+
+.form_signup .signup{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* background: yellow; */
+    margin: 30px 0;
+}
+
+.signup input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    outline: none;
+    border: 2px solid rgba(0,0,0,.5);
+    border-radius: 40px; /* Round corners */
+    font-size:16px;
+    color:black;
+    padding:20px 45px 20px 20px;
+}
+
+input::placeholder{
+    color:black;
+}
+
+.signup i {
+    position: absolute;
+    right: 20px;
+    top: 30%;
+    transform: translate(-50%);
+    font-size: 20px;
+}
+
+.form_signup .btn {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border : none;
+    outline: none;
+    border-radius: 40pc;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    cursor:pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+
+.form_signup .signup{
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.signup p a{
+   color:black;
+   text-decoration: none;
+   font-weight: 600; 
+}
+
+.signup p a:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
+.form_signup .btn:hover{
+    background: green;
+    color:white;
+}
+

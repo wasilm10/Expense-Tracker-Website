@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Your Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        min-height: 100vh;
+        background: #f5f8ff;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: large;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        flex-direction: column;
+        background-size: cover;
+        
+      }
+
+        
+        body.loaded {
+            opacity: 1;
+        }
+
+      
+      footer {
+        background-color: #000;
+        color: #fff;
+        padding: 10px 20px;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        flex-shrink: 0;
+      }
+      .footer p {
+            margin: 0;
+        }
+
+
+
+      .container {
+        margin: 80px 40px 40px; /* Updated margin to accommodate header */
+        max-width: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+
+      }
+
+      .container h1 {
+        color: #333;
+        margin-top: 0; /* Added to remove default margin */
+      }
+
+      .container .tab {
+        position: relative;
+        background: #fff;
+        padding: 0 20px 20px;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
+        border-radius: 5px;
+        overflow: hidden;
+      }
+
+      .container .tab input {
+        appearance: none;
+      }
+
+      .container .tab label {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      .container .tab label::after {
+        content: '+';
+        position: absolute;
+        right: 20px;
+        font-size: 2em;
+        color: rgba(0, 0, 0, 0.1);
+        transition: transform 1s;
+      }
+
+      .container .tab:hover label::after {
+        color: #333;
+      }
+
+      .container .tab input:checked ~ label::after {
+        transform: rotate(135deg);
+        color: #fff;
+      }
+
+      .container .tab label::after   {
+        content: '+';
+        position: absolute;
+        right: 20px;
+        font-size: 2em;
+        color: rgba(0, 0, 0, 0.1);
+        transition: transform 1s;
+      }
+
+      .container .tab:hover label::after {
+        color: #333;
+      }
+
+      .container .tab input:checked ~ label::after {
+        transform: rotate(135deg);
+        color: #fff;
+      }
+
+
+      .container .tab label h2 {
+        width: 40px;
+        height: 40px;
+        background: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 1.25em;
+        border-radius: 5px;
+        margin-right: 10px;
+      }
+
+      .container .tab input:checked ~ label h2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color: rgba(255, 255, 255, 0.2); /* Fixed color value */
+        font-size: 4em; /* Adjusted font size */
+        justify-content: flex-end; /* Removed padding */
+      }
+
+      .container .tab:nth-child(2) label h2,
+      .container .tab:nth-child(3) label h2,
+      .container .tab:nth-child(4) label h2,
+      .container .tab:nth-child(5) label h2,
+      .container .tab:nth-child(6) label h2 {
+        background: linear-gradient(135deg, #808080, #808080);
+      }
+
+      .container .tab label h3 {
+        position: relative;
+        font-weight: 500;
+        color: #333;
+        z-index: 0;
+      }
+
+      .container .tab input:checked ~ label h3 {
+        background: #fff;
+        padding: 2px 10px;
+        color: #333;
+        border-radius: 2px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      }
+
+      .container .tab .content {
+        max-height: 0;
+        transition: 1s;
+        overflow: hidden;
+      }
+
+      .container .tab input:checked ~ .content {
+        max-height: 100vh;
+      }
+
+      .container .tab .content p {
+        position: relative;
+        padding: 10px 0;
+        color: #333;
+        z-index: 0;
+      }
+
+      .container .tab input:checked ~ .content p {
+        color: #fff;
+      }
+      .container_1 {
+            flex: 1;
+        }
+        header{
+            display:flex;
+            position: relative;
+            padding:0px 0px 0px 20px;
+            justify-content: space-between;
+            background-color: #22c55e;
+            color: #fff;
+            align-items: center;
+            z-index:99;
+        }
+
+        h1{
+            font-size:2em;
+            user-select:none;
+        }
+        nav {
+            background-color: #22c55e;;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            margin-top: 0px;
+        }
+
+      nav a {
+            position:relative;
+            font-size:1.1em;
+            font-weight:500;
+            color: #fff;
+            text-decoration: none;
+            padding: 15px;
+            margin-left:40px
+        }
+        a:hover{
+        text-decoration: underline;
+        }
+
+
+    </style>
+  </head>
+  <body>
+    <div class="container_1">
+      <header>
+          <h1>Expense Tracker</h1>
+          <!-- <img src="Non-deductable-business-expenses-featured-image-.jpg">  -->
+          <nav class="menu">
+          <a href="index.html">Home</a>
+          <a href="about.html">Contact Us</a>
+          <a href="faq.html">FAQ</a>
+          <a href="login_choice.html">Login</a>
+          <a href="signup_choice.html">Signup</a>  
+      </nav>
+      </header>
+</div>
+    
+
+    <div class="container">
+      <h1>Frequently asked Questions</h1>
+      <div class="tab">
+        <input type="radio" name="acc" id="acc1">
+        <label for="acc1">
+          <h2>01</h2>
+          <h3>How do I create an account on your platform? </h3>
+        </label>
+        <div class="content">
+          <p>To create an account, simply click on the "Sign Up" button on the homepage, fill out the required information such as your email address, username, and password, and then follow the instructions to verify your email and complete the signup process.</p>
+        </div>
+      </div>
+<div class="tab">
+          <input type="radio" name="acc" id="acc2">
+          <label for="acc2">
+            <h2>02</h2>
+            <h3>What information is required for signing up? </h3>
+          </label>
+          <div class="content"><p>Typically, we require basic information such as your full name, email address, and a password to create your account. Some additional information like date of birth or phone number may also be requested for security purposes or to enhance your user experience.</p>
+            
+          </div>
+        </div>
+        <div class="tab">
+          <input type="radio" name="acc" id="acc3">
+          <label for="acc3">
+            <h2>03</h2>
+            <h3>Is my personal information safe during the signup process?</h3>
+          </label>
+          <div class="content"><p>Yes, we take the privacy and security of your personal information very seriously. All information provided during the signup process is encrypted and stored securely in accordance with industry standards. We do not share your information with third parties without your consent.</p>
+            
+          </div>
+        </div>
+        <div class="tab">
+          <input type="radio" name="acc" id="acc4">
+          <label for="acc4">
+            <h2>04</h2>
+            <h3>I'm having trouble logging into my account. What should I do?</h3>
+          </label>
+          <div class="content"><p>If you're experiencing issues logging in, first ensure that you're entering the correct email address and password. If you're still unable to log in, try resetting your password using the "Forgot Password" link. If the issue persists, please contact our support team for further assistance</p>
+            
+          </div>
+</div>
+         <div class="tab">
+          <input type="radio" name="acc" id="acc5">
+          <label for="acc5">
+            <h2>05</h2>
+            <h3>What should I do if I suspect unauthorized access to my account? </h3>
+          </label>
+          <div class="content"><p>If you believe that someone else has gained unauthorized access to your account, immediately change your password and review your account activity for any suspicious actions. Additionally, enable two-factor authentication (2FA) for an extra layer of security. If you're still concerned, please contact our support team for further assistance</p>
+            
+          
+          
+        </div>
+      </div>
+
+      
+
+    </div>
+
+    <footer>
+      <p>&copy; 2024 Your Expense Tracker. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
